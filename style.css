@@ -12,17 +12,25 @@ body{
 #menu{
     margin:0;
     height:150px;
-    width: 100vw;
-    background-color: #414144;
-    border-bottom: 5px solid #E88348;
+    width: 100%;
+    background-color: black;
+    box-shadow: 0px 0px 8px black;
 }
 
 #welcome{
     margin:0;
     height:650px;
-    width:100vw;
+    width:100%;
     position: relative;
     text-align: center;
+}
+
+#stuff{
+    margin:0;
+    height:500px;
+    width:100%;
+    background-color: #212122;
+    border-top: 5px solid #04D9B2;
 }
 
 #code-design{
@@ -31,15 +39,23 @@ body{
     transform: translateY(-40%);
     font-size: 48px;
     font-weight:900;
-    color:#E88348;
+    color:white;
+    transform: scale(0);
+
+    animation: main-load 700ms ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 #welcomeText{
     margin:0;
     top:30%;
-    color:#E88348;
+    color:transparent;
     font-weight: 700;
     font-size: 24px;
+    transform: translateY(0);
+
+    animation: welcome-load 700ms ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 #read-more{
@@ -47,25 +63,21 @@ body{
     border: none;
     position: relative;
     background-color: transparent;
-    color: #b35823;
+    color:white;
     font-size:24px;
     transition: 100ms ease-in-out;
+    border: var(--borderSize) solid white;
+
+    transform: translateX(-1000%);
+
+    animation: read-load 700ms ease-in-out 1000ms;
+    animation-fill-mode: forwards;
 }
 
-#read-more::before{
-    content: '';
-    position:absolute;
-    left: calc(var(--borderSize) * -2);
-    right: calc(var(--borderSize) * -2);
-    top: calc(var(--borderSize) * -2);
-    bottom: calc(var(--borderSize) * -2);
-    border: var(--borderSize) solid #b35823;
-    transition: 100ms ease-in-out;
-}
 
-#read-more:hover::before, #read-more:hover{
-    color:#E88348;
-    border-color: #E88348;
+#read-more:hover{
+    color:#04D9B2;
+    border-color: #04D9B2;
 }
 
 button:hover{
@@ -79,8 +91,11 @@ button:hover{
     top:50%;
     transform: translateY(-50%);
     margin-left: 25px;
-    color:#E88348;
+    color:white;
     font-size: 24px;
+
+    animation: button-load 700ms ease-in-out;
+    animation-fill-mode: forwards;
 }
 .top-buttonR{
     border:none;
@@ -90,8 +105,11 @@ button:hover{
     transform: translateY(-50%);
     margin-right: 25px;
     float:right;
-    color:#E88348;
+    color:white;
     font-size: 24px;
+
+    animation: button-load 700ms ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 .top-buttonL::before, .top-buttonR::before{
@@ -112,9 +130,53 @@ button:hover{
     top:calc(var(--borderSize) * -2);
     bottom:calc(var(--borderSize) * -2);
 
-    border-color: #E88348;
+    border-color: white;
 }
 
+@keyframes welcome-load{
+    0%{
+        color:transparent;
+        transform: translateY(-500%);
+    }
+    70%{
+        transform: translateY(50%);
+    }
+    100%{
+        color:white;
+        transform: translateY(0);
+    }
+}
+
+@keyframes main-load{
+    0%{
+        color:transparent;
+    }
+    100%{
+        color:white;
+        transform: scale(1);
+    }
+}
+
+@keyframes read-load{
+    0%{
+        transform: translateX(-1000%);
+    }
+    70%{
+        transform: translateX(50%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes button-load{
+    0%{
+        color:transparent;
+    }
+    100%{
+        color:white;
+    }
+}
 
 @media (max-width:700px){
     .top-buttonL, .top-buttonR{
