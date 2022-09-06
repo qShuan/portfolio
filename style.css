@@ -39,6 +39,7 @@ body{
     top:30%;
     color:#E88348;
     font-weight: 700;
+    font-size: 24px;
 }
 
 #read-more{
@@ -112,4 +113,23 @@ button:hover{
     bottom:calc(var(--borderSize) * -2);
 
     border-color: #E88348;
+}
+
+
+@media (max-width:700px){
+    .top-buttonL, .top-buttonR{
+        font-size: 14px;
+    }
+    #menu{
+        height:75px;
+    }
+    #code-design{
+        font-size: 26px;
+    }
+    #welcomeText{
+        font-size: 13px;
+    }
+    #read-more{
+        font-size:14px;
+    }
 }
