@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Roboto:wght@300&display=swap');
+
+body{
+    margin: 0;
+    font-family: "Roboto";
+    background-color: #414144;
+
+    --borderSize: 3px;
+}
+
+#menu{
+    margin:0;
+    height:150px;
+    width: 100vw;
+    background-color: #414144;
+    border-bottom: 5px solid #02A2A2;
+}
+
+#welcome{
+    margin:0;
+    height:650px;
+    width:100vw;
+    position: relative;
+    text-align: center;
+}
+
+#code-design{
+    margin: 0 auto;
+    top:40%;
+    transform: translateY(-40%);
+    font-size: 48px;
+    font-weight:900;
+    color:#E88348;
+}
+
+#welcomeText{
+    margin:0;
+    top:30%;
+    color:#E88348;
+    font-weight: 700;
+}
+
+#read-more{
+    top:50%;
+    border: none;
+    position: relative;
+    background-color: transparent;
+    color: #b35823;
+    font-size:24px;
+    transition: 100ms ease-in-out;
+}
+
+#read-more::before{
+    content: '';
+    position:absolute;
+    left: calc(var(--borderSize) * -2);
+    right: calc(var(--borderSize) * -2);
+    top: calc(var(--borderSize) * -2);
+    bottom: calc(var(--borderSize) * -2);
+    border: var(--borderSize) solid #b35823;
+    transition: 100ms ease-in-out;
+}
+
+#read-more:hover::before, #read-more:hover{
+    color:#E88348;
+    border-color: #E88348;
+}
+
+button:hover{
+    cursor:pointer;
+}
+
+.top-buttonL{
+    border:none;
+    background-color: transparent;
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+    margin-left: 25px;
+    color:#E88348;
+    font-size: 24px;
+}
+.top-buttonR{
+    border:none;
+    background-color: transparent;
+    position: relative;
+    top:50%;
+    transform: translateY(-50%);
+    margin-right: 25px;
+    float:right;
+    color:#E88348;
+    font-size: 24px;
+}
+
+.top-buttonL::before, .top-buttonR::before{
+    content: '';
+    position: absolute;
+    border: var(--borderSize) solid transparent;
+    left:0;
+    right:0;
+    top:0;
+    bottom: 0;
+
+    transition: 100ms ease-in-out;
+}
+
+.top-buttonL:hover::before, .top-buttonR:hover::before{
+    left:calc(var(--borderSize) * -2);
+    right:calc(var(--borderSize) * -2);
+    top:calc(var(--borderSize) * -2);
+    bottom:calc(var(--borderSize) * -2);
+
+    border-color: #E88348;
+}
