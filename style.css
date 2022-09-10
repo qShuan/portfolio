@@ -226,6 +226,7 @@ button:hover{
         margin-right: auto;
         margin-top:8rem;
         float:none;
+        text-align: center;
     }
     .title-name > h2, .main-content > h3{
         font-size:20px;
@@ -234,8 +235,8 @@ button:hover{
         height:287.5px;
         width:287.5px;
         float:none;
-        margin-left: auto;
-        margin-right: auto;
+        margin-left:50%;
+        transform: translateX(-50%);
         margin-top: 16rem;
     }
     img.joker-pic{
