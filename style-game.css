@@ -1,0 +1,55 @@
+body{
+    margin:0;
+    background-color: #111111;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+    font-size: 2.5rem;
+
+    /* VARIABLES */
+    --grid-size: 4;
+    --gap-size: 1rem;
+    --cell-size: 20vmin;
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+
+#board{
+    display: grid;
+    grid-template-rows: repeat(var(--grid-size), var(--cell-size));
+    grid-template-columns: repeat(var(--grid-size), var(--cell-size));
+    background-color: #71717171;
+    margin: auto;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 8px black;
+    gap: var(--gap-size);
+    padding: 1rem;
+    border: 0.5rem solid #616161;
+    position: relative;
+}
+
+.cell{
+    background-color: #616161;
+    border-radius: 0.5rem;
+}
+
+.tile{
+    --x:3;
+    --y:2;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--cell-size);
+    height: var(--cell-size);
+    background-color: aqua;
+    border-radius: 0.5rem;
+
+    top: calc(var(--y) * (var(--cell-size) + var(--gap-size)) + var(--gap-size));
+    left: calc(var(--x) * (var(--cell-size) + var(--gap-size)) + var(--gap-size));
+}
