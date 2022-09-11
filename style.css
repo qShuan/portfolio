@@ -7,7 +7,7 @@ body{
     /*background-image: linear-gradient(120deg, black 20%, #0c0c0c 45%, #151515 100%);
     */
     background: #151515;
-    background-image: url("bg.png");
+    background-image: url("bg-min.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
     color:white;
